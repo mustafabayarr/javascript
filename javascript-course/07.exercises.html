@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 07 - Exercises</title>
+  </head>
+  <body>
+    
+    
+    <script>
+      
+      /*
+      function greet(name){
+        console.log(`hello: ${name}`);
+      }
+
+      greet('Mustafa');
+      greet('Someone');
+      */
+
+      /*
+      function greet(){
+        if(!name) // !name will result as undefined 
+        console.log('Hi there');
+      }
+
+      greet();
+      */
+
+      /*
+      function convertToCelsius(fahrenheit){
+        celsius = (fahrenheit - 32) * 5/9;
+        return celsius;
+      }
+
+      console.log(convertToCelsius(86));
+      */
+
+      /*
+      function convertToFahrenheit(celsius){
+        fahrenheit = (celsius * 9/5) + 32;
+        return  fahrenheit;
+      }
+      
+      console.log(convertToFahrenheit(25));
+      */
+
+
+      function convertTemperature(temperature,unit){
+        if(unit === 'C'){
+          const fahrenheit = (temperature * 9/5) + 32;
+          return `${fahrenheit}F`;
+        }else if(unit === 'F'){
+          const celsius = (temperature - 32) * 5/9;
+          return `${celsius}C`;
+        }else {
+          throw new Error('Invalid unit. Please provide either "C" or "F".');
+          // or return a default value: return null;
+        }
+      }
+      console.log(convertTemperature(25, 'C')); // Output: 77F
+      console.log(convertTemperature(77, 'F')); // Output: 25C
+      console.log(convertTemperature(100, 'K')); // Throws an error or returns a default value
+
+
+      
+    </script>
+  </body>
+</html>
